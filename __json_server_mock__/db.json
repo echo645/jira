@@ -1,0 +1,57 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "李婷"
+        },
+        {
+            "id": 2,
+            "name": "liting"
+        },
+        {
+            "id": 3,
+            "name": "echo"
+        },
+        {
+            "id": 4,
+            "name": "echo645"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "name": "图书管理",
+            "personId": 1,
+            "organization": "图书组",
+            "created": 1604989757139
+        },
+        {
+            "id": 2,
+            "name": "工单管理",
+            "personId": 2,
+            "organization": "工单组",
+            "created": 1604989757139
+        },
+        {
+            "id": 3,
+            "name": "运营管理",
+            "personId": 3,
+            "organization": "运营组",
+            "created": 1604989757139
+        },
+        {
+            "id": 4,
+            "name": "物料管理",
+            "personId": 3,
+            "organization": "物料组",
+            "created": 1604989757139
+        },
+        {
+            "id": 5,
+            "name": "客服管理",
+            "personId": 4,
+            "organization": "客服组",
+            "created": 1604989757139
+        }
+    ]
+}
