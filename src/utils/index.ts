@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
-export const isFalsy = (value) => value === 0 ? false : !value
-export const cleanObject = (object) => {
+export const isFalsy = (value: any) => value === 0 ? false : !value
+export const cleanObject = (object: object) => {
     //Object.assign({}, object)
     const result = {...object}
     Object.keys(result).forEach(key => {
+        // @ts-ignore
         const value = result[key]
         // if(!value){ //当值为0时会有问题
         if(isFalsy(value)){
+            // @ts-ignore
             delete result[key]
         }
     })
     return result
 }
-export const useMount = (callback) => { //类似react中的componentDidMount,初始加载完后执行一次
+export const useMount = (callback: () => void) => { //类似react中的componentDidMount,初始加载完后执行一次
     useEffect(() => {
         callback()
     }, []);
@@ -33,8 +35,8 @@ export const useMount = (callback) => { //类似react中的componentDidMount,初
 //log()
 //log()
 //log()
-
-export const useDebounce = (value, delay) => {
+//后面用泛型来规范类型
+export const useDebounce = (value: unknown, delay?: number): any => {
     const [debounceValue, setDebounceValue] = useState(value);
     useEffect(() => {
         //每次在value变化以后，设置一个定时器

@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@types/qs": "^6.9.6",
     "prettier": "2.3.2"
   },
   "lint-staged": {
